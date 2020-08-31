@@ -15,7 +15,6 @@ contract('TodoList', (accounts) => {
 
   it('lists tasks', async () => {
     const itemIds = await this.todoList.getItemids()
-    console.log('item ids', itemIds);
     let tasks;
     for (let i = 0; i < itemIds.length; i++) {
         tasks = await this.todoList.items(itemIds[i]);

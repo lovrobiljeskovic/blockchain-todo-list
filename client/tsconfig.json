@@ -18,9 +18,12 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react",
-    "noImplicitAny": false
+    "noImplicitAny": false,
   },
   "include": [
-    "src"
+    "src",
+  ],
+  "files": [
+    "./node_modules/web3-utils/types/index.d.ts"
   ]
 }

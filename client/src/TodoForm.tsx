@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import useInputState from './useInputState';
+import { todosCtx } from './context/TodoProvider';
 
-const TodoForm = ({ todos, createTask }) => {
+const TodoForm = ({}) => {
   const { value, reset, onChange } = useInputState();
+  const todoProviderContext = useContext(todosCtx);
   return (
     <div>
       <form onSubmit={(event) => {
           event.preventDefault()
-          createTask(value)
+          todoProviderContext.createTask(value)
           reset();
         }}>
         <TextField
