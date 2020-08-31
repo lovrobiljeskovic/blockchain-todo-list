@@ -1,6 +1,6 @@
 ## Setup:
 
-Backend:
+Backend(I used Ganache as my local test blockchain):
 
 ### `truffle migrate`
 
