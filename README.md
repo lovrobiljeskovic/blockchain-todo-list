@@ -6,7 +6,7 @@ Backend:
 
 You have to then move the `build` foler to `client/src` folder so it can access the compiled json file.
 
-Frontend:
+Frontend(run the commands from `client` folder):
 
 Installing dependancies: 
 
