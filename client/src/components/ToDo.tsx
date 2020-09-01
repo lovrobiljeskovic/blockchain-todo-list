@@ -6,8 +6,8 @@ import React, { FC } from "react";
 
 export const ToDo: FC<{}> = ({}) => {
   return (
-    <Container style={{ backgroundColor: '#FFE4C4', marginTop: '80px', width: '500px'}}>
-      <Typography component="h1" variant="h2" style={{paddingTop: '20px'}}>
+    <Container style={{ display: 'flex', flexDirection: 'column', backgroundColor: '#FFE4C4', marginTop: '80px', width: '500px'}}>
+      <Typography component="h1" variant="h2" style={{paddingTop: '20px', display: 'flex', textAlign: 'center', justifyContent: 'center', flexDirection: 'row'}}>
         Todos
       </Typography>
       <TodoForm/>

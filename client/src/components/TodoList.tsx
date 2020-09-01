@@ -7,7 +7,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 import { withStyles } from '@material-ui/core/styles';
-import { todosCtx } from './context/TodoProvider';
+import { todosCtx } from '../context/TodoProvider';
 
 const BlueCheckBox = withStyles({
   root: {
@@ -22,7 +22,7 @@ const BlueCheckBox = withStyles({
 const TodoList: FC<{}> = ({}) =>  {
   const todoProviderContext = useContext(todosCtx);
   return (
-  <List>
+  <List style={{display: 'flex', flexDirection: 'column'}}>
     {todoProviderContext.state.todos.map((todo: any, index: number) => (
       <ListItem key={index.toString()} dense button>
       <BlueCheckBox/>

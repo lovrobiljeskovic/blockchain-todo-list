@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { ToDo } from './ToDo';
+import { ToDo } from './components/ToDo';
 import { Web3Provider } from './context/Web3Provider';
 import { TodosProvider } from './context/TodoProvider';
 

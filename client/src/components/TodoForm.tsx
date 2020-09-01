@@ -1,13 +1,14 @@
 import React, { useContext } from 'react';
 import TextField from '@material-ui/core/TextField';
 import useInputState from './useInputState';
-import { todosCtx } from './context/TodoProvider';
+import { todosCtx } from '../context/TodoProvider';
+import { Container } from '@material-ui/core';
 
 const TodoForm = ({}) => {
   const { value, reset, onChange } = useInputState();
   const todoProviderContext = useContext(todosCtx);
   return (
-    <div>
+    <Container style={{display: 'flex', justifyContent: 'center'}}>
       <form onSubmit={(event) => {
           event.preventDefault()
           todoProviderContext.createTask(value)
@@ -21,7 +22,7 @@ const TodoForm = ({}) => {
         value={value}
         />
         </form>
-    </div>
+    </Container>
   );
 };
 
